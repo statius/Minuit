@@ -1,6 +1,6 @@
 # Minuit
 
-Wolfram Language interface to the [*MINUIT2*](https://root.cern.ch/root/html/MATH_MINUIT2_Index.html) C++ package via the Python module [*iminuit*](https://github.com/scikit-hep/iminuit).
+Wolfram Language interface to the [*MINUIT2*](https://root.cern.ch/root/html/MATH_MINUIT2_Index.html) C++ package via the Python module [*iminuit*](https://github.com/scikit-hep/iminuit)
 
 *Minuit* can be used for general robust function minimization, as well as for likelihood fits of models to data and to get model parameter error estimates from likelihood profile analyses.
 
@@ -8,7 +8,7 @@ Wolfram Language interface to the [*MINUIT2*](https://root.cern.ch/root/html/MAT
 
 ## Installation
 
-- Download the latest release and unpack it or clone the repository somewhere on the Wolfram Language `$Path` (e.g. the `Applications` folder in`$UserBaseDirectory` for *Mathematica*).
+- Download the latest release and unpack it or clone the repository somewhere on the Wolfram Language `$Path` (e.g. the `Applications` folder in `$UserBaseDirectory` for *Mathematica*).
 
 - Make sure that your system has an installation of Python accessible to the Wolfram Language (see `FindExternalEvaluators[]`) and that *iminuit* is installed.
 
