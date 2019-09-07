@@ -4,7 +4,7 @@ Wolfram Language interface to the [*MINUIT2*](https://root.cern.ch/root/html/MAT
 
 *Minuit* can be used for general robust function minimization, as well as for likelihood fits of models to data and to get model parameter error estimates from likelihood profile analyses.
 
-**Code:** [github/statius/minuit](https://github/statius/minuit)
+**Code:** [github.com/statius/minuit](https://github.com/statius/minuit)
 
 ## Installation
 
@@ -99,7 +99,7 @@ and returned
 m @ "MinosErrors"
 ```
 
-
+---
 
 Many (but not all) properties of the Python `Minuit` object have been translated into Wolfram-flavored syntax and incorporated into the definition of `MinuitMinimizationObject`. The available properties and methods are given by
 
