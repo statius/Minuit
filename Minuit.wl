@@ -356,6 +356,8 @@ $PythonSessionProlog[] := Join[$pythonSessionProlog, $config @ "PythonSessionPro
 
 StartPythonSession[assoc_Association: <||>] := (
 
+  Unprotect @ $PythonSession;
+
   If[ValueQ @ $PythonSession, DeleteObject @ $PythonSession] // Quiet;
   
   $PythonSession = StartExternalSession[
@@ -369,7 +371,11 @@ StartPythonSession[assoc_Association: <||>] := (
       ],
       Automatic
     ]
-  ]
+  ];
+  
+  Protect @ $PythonSession;
+  
+  $PythonSession
 
 )
 
