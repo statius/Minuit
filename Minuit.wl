@@ -725,6 +725,7 @@ MinuitMinimizationObject /: MakeBoxes[
      BoxForm`SummaryItem @ {"Minimum configuration: ", With[{p = a @ "ParameterValues"}, FlipView @ {If[Length[Flatten @ {p}] > 3, {Skeleton @ Length[Flatten @ {p}]}, p], p}]},
      BoxForm`SummaryItem @ {"Minimum value: ", a @ "MinimumValue"}
    }, 
+   
    below = {
      BoxForm`SummaryItem @ {"Number of evaluations: ", a @ "TotalFunctionEvaluationCount"}, 
      If[
@@ -848,6 +849,9 @@ Migrad[
 ] := iMigrad[m, opts]
 
 
+Migrad[f_? FailureQ] := f
+
+
 (* ::Subsubsection::Closed:: *)
 (*iHesse*)
 
@@ -895,6 +899,9 @@ Hesse[
 ] := iHesse[m, opts]
 
 
+Hesse[f_? FailureQ] := f
+
+
 (* ::Subsubsection::Closed:: *)
 (*iMinos*)
 
@@ -921,7 +928,7 @@ iMinos[
 ]
 
 
-(* ::Subsubsection::Closed:: *)
+(* ::Subsubsection:: *)
 (*Minos*)
 
 
@@ -941,6 +948,9 @@ Minos[
   m : MinuitMinimizationObject[a_Association /; ContainsAll[Keys @ a, $minuitObjectProperties]], 
   opts : OptionsPattern[]
 ] := iMinos[m, opts]
+
+
+Minos[f_? FailureQ] := f
 
 
 (* ::Chapter:: *)
