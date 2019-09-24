@@ -849,7 +849,7 @@ Migrad[
 ] := iMigrad[m, opts]
 
 
-Migrad[f_? FailureQ] := f
+Migrad[f_? FailureQ, opts : OptionsPattern[]] := f
 
 
 (* ::Subsubsection::Closed:: *)
@@ -899,7 +899,7 @@ Hesse[
 ] := iHesse[m, opts]
 
 
-Hesse[f_? FailureQ] := f
+Hesse[f_? FailureQ, opts : OptionsPattern[]] := f
 
 
 (* ::Subsubsection::Closed:: *)
@@ -928,7 +928,7 @@ iMinos[
 ]
 
 
-(* ::Subsubsection:: *)
+(* ::Subsubsection::Closed:: *)
 (*Minos*)
 
 
@@ -950,7 +950,7 @@ Minos[
 ] := iMinos[m, opts]
 
 
-Minos[f_? FailureQ] := f
+Minos[f_? FailureQ, opts : OptionsPattern[]] := f
 
 
 (* ::Chapter:: *)
